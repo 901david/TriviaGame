@@ -1,0 +1,46 @@
+#backG {
+	background-image: url("../images/office-background.jpg");
+	background-size: cover;
+	height: 700px;
+}
+#firstRow {
+	width:600px;
+	height:650px;
+	background-color: white;
+	border:10px solid black;
+	margin-left: 50px;
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
+#questionRow {
+	font-size: 20px;
+}
+#choicesRow {
+	margin-top: 25px;
+	font-size: 24px;
+	line-height: 36px;
+
+}
+#timerRow {
+	font-size: 18px;
+}
+.fontChangeOne {
+	font-size: 24px;
+	color:red;
+}
+.fontChangeTwo {
+	font-size:32px;
+	color:orange;
+}
+.modifyAnswer {
+	color:green;
+}
+#imageRow {
+	margin-top: 50px;
+}
+#imageRow img {
+height: 150px;
+width:auto;
+}
