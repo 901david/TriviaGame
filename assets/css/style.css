@@ -16,6 +16,8 @@ h1 {
 }
 #questionRow {
 	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 #choicesRow {
 	margin-top: 25px;
@@ -41,6 +43,27 @@ h1 {
 	margin-top: 50px;
 }
 #imageRow img {
-height: 150px;
-width:auto;
+height:auto;
+width:350px;
+}
+button {
+	margin-top: 10px;
+}
+.frontImage {
+	width:50%;
+	height:auto;
+}
+.enderText {
+	font-size: 42px;
+	line-height: 55px;
+	font-weight: bold;
+}
+.textBigger {
+	font-size:32px;
+}
+.activeAnswer {
+	color:red;
+	padding:5px;
+	background-color: green;
+	border: 5px solid black;
 }
