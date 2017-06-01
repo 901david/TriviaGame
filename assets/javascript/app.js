@@ -6,7 +6,7 @@ var unansweredAnswers = 0;
 var totalTime = 0;
 var currentQuestion;
 var currentAnswer;
-var currentQuestionIndex = 0;
+var currentQuestionIndex = 5;
 var displayConvertedTime;
 
  
@@ -32,7 +32,7 @@ var qTwo = {
 	choice3: 'Phyllis',
 	choice4: 'Angela',
 	answer: 'Angela',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/mose.mp3'),
 	starterImage: '<img style="width:250px" src="assets/images/holly.jpg">',
 	image: '<img src="assets/images/dwight-ang.gif">'
 }
@@ -43,7 +43,7 @@ var qThree = {
 	choice3: '8',
 	choice4: '6',
 	answer: '9',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/toby.mp3'),
 	starterImage: '<img  style="width:400px" src="assets/images/office-banner.jpeg">',
 	image: '<img  style="width:400px" src="assets/images/full-crew.jpg">'
 }
@@ -54,7 +54,7 @@ var qFour = {
 	choice3: 'Meredith',
 	choice4: 'Packer',
 	answer: 'Ryan',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/ryan.mp3'),
 	starterImage: '<img style="width:250px" src= "assets/images/wiseworms.jpg">',
 	image: '<img src="assets/images/ryan.gif">'
 }
@@ -65,9 +65,9 @@ var qFive = {
 	choice3: '5',
 	choice4: '10',
 	answer: '5',
-	sound: new Audio('assets/audio/weapons.wav.mp3'),
-	starterImage: '<img src="assets/images/killer-dwight.gif">',
-	image: '<img src="assets/images/dwight.png">'
+	sound: new Audio('assets/audio/weapons2.mp3'),
+	starterImage: '<img style="width:200px" src="assets/images/dwight.png">',
+	image: '<img src="assets/images/killer-dwight.gif">'
 }
 var qSix = {
 	question: '6.  The entire warehouse crew quits, sending Darryl into a spiral of despair after this happens:',
@@ -76,7 +76,7 @@ var qSix = {
 	choice3: 'They win the lottery.',
 	choice4: 'All of the above.',
 	answer: 'They win the lottery.',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/going.mp3'),
 	starterImage: '<img src="assets/images/dance.gif">',
 	image: '<img src="assets/images/lotto.gif">'
 }
@@ -109,7 +109,7 @@ var qNine = {
 	choice3: "That's what she said!",
 	choice4: "Can't we all get along?",
 	answer: "That's what she said!",
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/she-said.mp3'),
 	starterImage: '<img  style="width:200px" src="assets/images/swag.jpg">',
 	image: '<img src="assets/images/she-said.jpg">'
 }
