@@ -6,13 +6,19 @@ var unansweredAnswers = 0;
 var totalTime = 0;
 var currentQuestion;
 var currentAnswer;
-var currentQuestionIndex = 0;
+var currentQuestionIndex = 14;
 var displayConvertedTime;
 
  
 
 
 // Definitions of objects which will be the basis of the game
+var someSounds = {
+	randomTimeOutAudio: new Audio('assets/audio/stanley.mp3'),
+	basicEnder: new Audio('assets/audio/basic-ender.mp3'),
+	amEnder: new Audio('assets/audio/am-ender.mp3'),
+	expertEnder: new Audio('assets/audio/expert-ender.mp3')
+}
 
 var qOne = {
 	question: '1.  Who is Michael Scott, "the worlds greatest boss," in real life?',
@@ -23,8 +29,7 @@ var qOne = {
 	answer: 'Steve Carell',
 	sound: new Audio('assets/audio/best-boss.mp3'),
 	starterImage: '<img src="assets/images/crazymichael.gif">',
-	image: '<img src="assets/images/best-boss.jpg">',
-	randomTimeOutAudio: new Audio('assets/audio/stanley.mp3') 
+	image: '<img src="assets/images/best-boss.jpg">', 
 };
 var qTwo = {
 	question: '2.  The Office is filled with romances.  Which female in the office does Dwight have an ongoing relationship with thoughout the seasons?',
@@ -259,7 +264,7 @@ function timeOut() {
 		console.log(totalTime);
 	currentQuestionIndex++;
 	$("#imageRow").html("<img src = 'assets/images/stanley.jpg'>");
-	qOne.randomTimeOutAudio.play();
+	someSounds.randomTimeOutAudio.play();
 	$("#questionRow").html("<p class='textBigger'>Sorry-You didn't answer at ALL! You should have at least guessed...</p><p>That's ok we will keep moving on.</p>");
 	$("#timerRow").empty();
 	$("#choicesRow").empty();
@@ -289,6 +294,9 @@ function allDone () {
 	$(resetButton).one("click", function () {
 		$(".startUpAudio").attr("src", "");
 		$("#choicesRow").empty();
+		correctAnswers = 0;
+		wrongAnswers = 0;
+		unansweredAnswers = 0;
 		currentQuestionIndex = 0;
 		showQuestion(listOfQuestions[currentQuestionIndex]);
 	});
@@ -315,12 +323,15 @@ function allDone () {
 function whatIsYourGrade () {
 	if ((wrongAnswers < 4) && (correctAnswers > 9) && (totalTime < 121)) { 
 		$("#choicesRow").append("<h1 style='text-align:center'>You have EXPERT Office Knowledge<br>CONGRATS!</h1>");
+		someSounds.expertEnder.play();
 	}
 	else if ((wrongAnswers < 6) && (correctAnswers > 6) && (totalTime < 181)) {
 		$("#choicesRow").append("<h1 style='text-align:center'>You have AMATEUR Office Knowledge<br>Keep Playing.</h1>");
+		someSounds.amEnder.play();
 	}
 	else {
 		$("#choicesRow").append("<h1 style='text-align:center'>You have BASIC Office Knowledge<br>Keep playing to increase your level.</h1>");
+		someSounds.basicEnder.play();
 	}
 };
 
