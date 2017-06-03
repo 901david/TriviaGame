@@ -94,7 +94,7 @@ var qSeven = {
 	choice4: 'Jamaica',
 	answer: 'Jamaica',
 	sound: new Audio('assets/audio/punish.mp3'),
-	starterImage: '<img style="width:225px" src="assets/images/jamaica.gif">',
+	starterImage: '<img style="width:200px" src="assets/images/jamaica.gif">',
 	image: '<img src="assets/images/jamaica-jan.jpg">'
 }
 var qEight = {
@@ -105,7 +105,7 @@ var qEight = {
 	choice4: 'Collective Vision Exclusive Paper',
 	answer: 'Michael Scott Paper Company',
 	sound: new Audio('assets/audio/merhit.mp3'),
-	starterImage: '<img  style="width:300px" src="assets/images/car-hit.jpg">',
+	starterImage: '<img  style="width:250px" src="assets/images/car-hit.jpg">',
 	image: '<img  style="width:450px" src="assets/images/merhit.jpg">'
 }
 var qNine = {
@@ -149,7 +149,7 @@ var qTwelve = {
 	choice4: 'All of the above',
 	answer: 'All of the above',
 	sound: new Audio('assets/audio/urine.mp3'),
-	starterImage: '<img style="width:200px" src="assets/images/date-mike.jpg">',
+	starterImage: '<img style="width:175px" src="assets/images/date-mike.jpg">',
 	image: '<img src="assets/images/urine.jpg">'
 }
 var qThirteen = {
@@ -177,9 +177,9 @@ var qFourteen = {
 var qFifteen = {
 	question: '15.  After making the mistake of signing a contract with Angela to have a child, Dwight realizes he could owe Angela $30,000 plus he comes up with what idea to settle?',
 	choice1: 'Free Beet Wine',
-	choice2: 'Gives her his idea for a Hay Heaven',
+	choice2: 'His Weapon Collection',
 	choice3: 'Sexual Punch Card',
-	choice4: "Gives her some of his grandmother's farm",
+	choice4: "Gives land on his farm",
 	answer: 'Sexual Punch Card',
 	sound: new Audio('assets/audio/specimen.mp3'),
 	starterImage: '<img  style="width:200px" src="assets/images/dwight-imitator.jpg">',
@@ -336,7 +336,7 @@ function whatIsYourGrade () {
 };
 
 $(document).ready(function(){
-	var topTitle = $("<h1 class='introTitle'>The Office Trivia Game</h1>");
+	var topTitle = $("<h1 class='introTitle'>the Office Trivia Game</h1>");
 	$("#firstRow").prepend(topTitle);
 	//This will control autoplay of Theme once you get to site.
 	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
