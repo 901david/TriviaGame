@@ -1,12 +1,12 @@
 // Definition of variables
-var timeAllowed = 20;
+var timeAllowed = 30;
 var correctAnswers = 0;
 var wrongAnswers = 0;
 var unansweredAnswers = 0;
 var totalTime = 0;
 var currentQuestion;
 var currentAnswer;
-var currentQuestionIndex = 5;
+var currentQuestionIndex = 0;
 var displayConvertedTime;
 
  
@@ -23,7 +23,8 @@ var qOne = {
 	answer: 'Steve Carell',
 	sound: new Audio('assets/audio/best-boss.mp3'),
 	starterImage: '<img src="assets/images/crazymichael.gif">',
-	image: '<img src="assets/images/best-boss.jpg">'
+	image: '<img src="assets/images/best-boss.jpg">',
+	randomTimeOutAudio: new Audio('assets/audio/stanley.mp3') 
 };
 var qTwo = {
 	question: '2.  The Office is filled with romances.  Which female in the office does Dwight have an ongoing relationship with thoughout the seasons?',
@@ -43,7 +44,7 @@ var qThree = {
 	choice3: '8',
 	choice4: '6',
 	answer: '9',
-	sound: new Audio('assets/audio/toby.mp3'),
+	sound: new Audio('assets/audio/toby2.mp3'),
 	starterImage: '<img  style="width:400px" src="assets/images/office-banner.jpeg">',
 	image: '<img  style="width:400px" src="assets/images/full-crew.jpg">'
 }
@@ -71,7 +72,7 @@ var qFive = {
 }
 var qSix = {
 	question: '6.  The entire warehouse crew quits, sending Darryl into a spiral of despair after this happens:',
-	choice1: 'An Suv crashes into the warehouse and they get a settlement.',
+	choice1: 'Settlement from a lawsuit.',
 	choice2: 'One of the employees robs a bank.',
 	choice3: 'They win the lottery.',
 	choice4: 'All of the above.',
@@ -87,8 +88,8 @@ var qSeven = {
 	choice3: 'Cayman Islands',
 	choice4: 'Jamaica',
 	answer: 'Jamaica',
-	sound: new Audio('assets/audio/punish.wav'),
-	starterImage: '<img style="width:250px" src="assets/images/jamaica.gif">',
+	sound: new Audio('assets/audio/punish.mp3'),
+	starterImage: '<img style="width:225px" src="assets/images/jamaica.gif">',
 	image: '<img src="assets/images/jamaica-jan.jpg">'
 }
 var qEight = {
@@ -98,14 +99,14 @@ var qEight = {
 	choice3: 'Michael Scott Paper Company',
 	choice4: 'Collective Vision Exclusive Paper',
 	answer: 'Michael Scott Paper Company',
-	sound: new Audio('../audio/#.mp3'),
+	sound: new Audio('assets/audio/merhit.mp3'),
 	starterImage: '<img  style="width:300px" src="assets/images/car-hit.jpg">',
-	image: '<img  style="width:450px" src="assets/images/britney.jpg">'
+	image: '<img  style="width:450px" src="assets/images/merhit.jpg">'
 }
 var qNine = {
 	question: "9.  What is the famed Michael Scott's most well-known catchphrase?",
-	choice1: "I will take care of that, and please don't call me Shirley.",
-	choice2: 'Waaaaaaaaaassssssssssuuuuuuuuuppppppp',
+	choice1: "Please don't call me Shirley.",
+	choice2: 'Waaaaaaaaaassssssuuuuppppppp',
 	choice3: "That's what she said!",
 	choice4: "Can't we all get along?",
 	answer: "That's what she said!",
@@ -120,7 +121,7 @@ var qTen = {
 	choice3: 'Shoe La La',
 	choice4: 'Threat Level Midnight',
 	answer: 'Threat Level Midnight',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/scarn.mp3'),
 	starterImage: '<img  style="width:200px" src="assets/images/estimate-me.jpg">',
 	image: '<img style="width:450px" src="assets/images/midnight.png">'
 }
@@ -131,7 +132,7 @@ var qEleven = {
 	choice3: 'land',
 	choice4: 'cheap',
 	answer: 'booze',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/boss.mp3'),
 	starterImage: '<img src="assets/images/michael-dance.gif">',
 	image: '<img src="assets/images/booze-cruise.jpg">'
 }
@@ -142,7 +143,7 @@ var qTwelve = {
 	choice3: 'Set up a black light',
 	choice4: 'All of the above',
 	answer: 'All of the above',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/urine.mp3'),
 	starterImage: '<img style="width:200px" src="assets/images/date-mike.jpg">',
 	image: '<img src="assets/images/urine.jpg">'
 }
@@ -153,8 +154,8 @@ var qThirteen = {
 	choice3: 'Will Smith',
 	choice4: 'Machete',
 	answer: 'Will Ferrell',
-	sound: new Audio('assets/audio/#.mp3'),
-	starterImage: '<img src="assets/images/stanley.jpg">',
+	sound: new Audio('assets/audio/hoe.mp3'),
+	starterImage: '<img src="assets/images/you-didnt-answer.gif">',
 	image: '<img  style="width:450px" src="assets/images/will.jpg">'
 }
 var qFourteen = {
@@ -164,20 +165,20 @@ var qFourteen = {
 	choice3: 'Andy',
 	choice4: 'Pete',
 	answer: 'Andy',
-	sound: new Audio('assets/audio/#.mp3'),
+	sound: new Audio('assets/audio/cornell.mp3'),
 	starterImage: '<img  style="width:450px" src="assets/images/cornelld.gif">',
 	image: '<img  style="width:450px" src="assets/images/cornell.jpg">'
 }
 var qFifteen = {
-	question: '15.  After making the mistake of signing a contract with Angela to have a child, then realizing he had feelings for another woman Dwight and Angela enter mediation to determine the damages if the contract is broken.  Once Dwight realizes he could owe Angela $30,000 plus he comes up with what idea to settle?',
+	question: '15.  After making the mistake of signing a contract with Angela to have a child, Dwight realizes he could owe Angela $30,000 plus he comes up with what idea to settle?',
 	choice1: 'Free Beet Wine',
 	choice2: 'Gives her his idea for a Hay Heaven',
 	choice3: 'Sexual Punch Card',
 	choice4: "Gives her some of his grandmother's farm",
 	answer: 'Sexual Punch Card',
-	sound: new Audio('assets/audio/#.mp3'),
-	starterImage: '<img  style="width:200px" src="assets/images/that-face.jpg">',
-	image: '<img src="assets/images/dwight-imitator.jpg">'
+	sound: new Audio('assets/audio/specimen.mp3'),
+	starterImage: '<img  style="width:200px" src="assets/images/dwight-imitator.jpg">',
+	image: '<img src="assets/images/that-face.jpg">'
 }
 // Question array to iterate over
 var listOfQuestions = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen, qEleven, qTwelve, qThirteen, qFourteen, qFifteen];
@@ -185,7 +186,7 @@ var listOfQuestions = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, q
 function showQuestion (x) {
 	$("#timerRow").removeClass("fontChangeOne");
 	currentQuestion = x;
-	timeAllowed = 20;
+	timeAllowed = 30;
 	counter = setInterval(timer, 1000);
 	$("#imageRow").html(currentQuestion.starterImage);
 	$("#questionRow").html(currentQuestion.question);
@@ -210,7 +211,7 @@ function showQuestion (x) {
 function checkAnswer(choice) {
 	// debugger;
 	if (choice === currentQuestion.answer) {
-		totalTime = totalTime + (20 - timeAllowed);
+		totalTime = totalTime + (30 - timeAllowed);
 		console.log(totalTime);
 		currentQuestionIndex++;
 		correctAnswers++;
@@ -225,7 +226,7 @@ function checkAnswer(choice) {
 	
 	}
 	else {
-		totalTime = totalTime + (20 - timeAllowed);
+		totalTime = totalTime + (30 - timeAllowed);
 		console.log(totalTime);
 		currentQuestionIndex++;
 		wrongAnswers++;
@@ -254,14 +255,15 @@ function timer () {
 	};
 // Timeout Funtion
 function timeOut() {
-	totalTime = totalTime + (20 - timeAllowed);
+	totalTime = totalTime + (30 - timeAllowed);
 		console.log(totalTime);
 	currentQuestionIndex++;
-	$("#imageRow").html("<img src = 'assets/images/you-didnt-answer.gif'>");
+	$("#imageRow").html("<img src = 'assets/images/stanley.jpg'>");
+	qOne.randomTimeOutAudio.play();
 	$("#questionRow").html("<p class='textBigger'>Sorry-You didn't answer at ALL! You should have at least guessed...</p><p>That's ok we will keep moving on.</p>");
 	$("#timerRow").empty();
 	$("#choicesRow").empty();
-	time = 20;
+	time = 30;
 	areWeDoneYet ();
 	
 
@@ -269,21 +271,23 @@ function timeOut() {
 // Determines if we should keep going or end the game
 function areWeDoneYet () {
 	if (currentQuestionIndex === (listOfQuestions.length)) {
-		setTimeout (function() {allDone()}, 5000);	
+		setTimeout (function() {allDone()}, 6500);	
 	}
 	else {
 		setTimeout(function () { 
-			showQuestion(listOfQuestions[currentQuestionIndex])}, 5000);
+			showQuestion(listOfQuestions[currentQuestionIndex])}, 6500);
 	};
 };;
 // What happens when game is over
 function allDone () {
 	displayConvertedTime = timeConverter(totalTime);
+	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
 	$("#imageRow").empty();
 	$("#questionRow").html('<p class="enderText">Wrong ' + wrongAnswers + '</p><p class="enderText">Correct ' + correctAnswers + '</p><p class="enderText">Unanswered ' + unansweredAnswers + '</p>' + '<p>You spent ' +  displayConvertedTime + ' total on this quiz answering the questions</p>');
 	whatIsYourGrade();
 	var resetButton = $("#choicesRow").append("<div class='button'><button class='btn-danger btn-xxl'>RESTART GAME</button></div>");
 	$(resetButton).one("click", function () {
+		$(".startUpAudio").attr("src", "");
 		$("#choicesRow").empty();
 		currentQuestionIndex = 0;
 		showQuestion(listOfQuestions[currentQuestionIndex]);
@@ -324,7 +328,7 @@ $(document).ready(function(){
 	var topTitle = $("<h1 class='introTitle'>The Office Trivia Game</h1>");
 	$("#firstRow").prepend(topTitle);
 	//This will control autoplay of Theme once you get to site.
-	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>")
+	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
 	$("#questionRow").append("<p>Press the start game button to begin.  Trivia questions will be displayed.  Click the answer you believe to be correct.  You will be alerted if your answer was correct or incorrect and then the game will move you on to the next question. At the end the game will let you know how many questions you got right and wrong and how much time you spent overall answering questions on the quiz.  Based on a combination of accuracy and time you will be awarded an Office Trivia Skill Level.  Enjoy!</p>");
 	var starterButton = $("#firstRow").append("<div class='button'><button class='btn-warning btn-lg'>START GAME</button></div>");
 	$(starterButton).one("click", function () {
