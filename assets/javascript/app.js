@@ -6,7 +6,7 @@ var unansweredAnswers = 0;
 var totalTime = 0;
 var currentQuestion;
 var currentAnswer;
-var currentQuestionIndex = 14;
+var currentQuestionIndex = 0;
 var displayConvertedTime;
 
  
