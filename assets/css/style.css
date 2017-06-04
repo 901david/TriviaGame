@@ -4,8 +4,6 @@
 	height: 700px;
 }
 #firstRow {
-	width:600px;
-	height:650px;
 	background-color: white;
 	border:10px solid black;
 	margin-left: 50px;
@@ -51,6 +49,7 @@ width:350px;
 }
 button {
 	margin-top: 10px;
+	margin-bottom: 50px;
 }
 .frontImage {
 	width:50%;
