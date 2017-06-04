@@ -17,7 +17,7 @@ var someSounds = {
 	randomTimeOutAudio: new Audio('assets/audio/stanley.mp3'),
 	basicEnder: new Audio('assets/audio/basic-ender.mp3'),
 	amEnder: new Audio('assets/audio/am-ender.mp3'),
-	expertEnder: new Audio('assets/audio/expert-ender.mp3')
+	expertEnder: new Audio('assets/audio/expert-ender2.mp3')
 }
 
 var qOne = {
@@ -159,7 +159,7 @@ var qThirteen = {
 	choice3: 'Will Smith',
 	choice4: 'Machete',
 	answer: 'Will Ferrell',
-	sound: new Audio('assets/audio/hoe.mp3'),
+	sound: new Audio('assets/audio/hoe2.mp3'),
 	starterImage: '<img src="assets/images/you-didnt-answer.gif">',
 	image: '<img  style="width:450px" src="assets/images/will.jpg">'
 }
@@ -321,11 +321,11 @@ function allDone () {
   }
 // This will add a little fun
 function whatIsYourGrade () {
-	if ((wrongAnswers < 4) && (correctAnswers > 9) && (totalTime < 121)) { 
+	if ((wrongAnswers < 4) && (correctAnswers > 9) && (totalTime < 160)) { 
 		$("#choicesRow").append("<h1 style='text-align:center'>You have EXPERT Office Knowledge<br>CONGRATS!</h1>");
 		someSounds.expertEnder.play();
 	}
-	else if ((wrongAnswers < 6) && (correctAnswers > 6) && (totalTime < 181)) {
+	else if ((wrongAnswers < 6) && (correctAnswers > 6) && (totalTime < 200)) {
 		$("#choicesRow").append("<h1 style='text-align:center'>You have AMATEUR Office Knowledge<br>Keep Playing.</h1>");
 		someSounds.amEnder.play();
 	}
