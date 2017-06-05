@@ -83,7 +83,7 @@ button {
 
 @media screen and (max-width: 750px) {
 	#imageRow img {
-	max-width: 200px;
+	max-width: 250px;
 }
 .choice:hover{
 	color:green;
