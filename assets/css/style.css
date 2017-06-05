@@ -85,5 +85,13 @@ button {
 	#imageRow img {
 	max-width: 100px;
 }
+.choice:hover{
+	color:green;
+	width:200px;
+	height:75px;
+	background-color:lightgray;
+	border:2px solid black;
+	white-space: normal;
 
+}
 }
