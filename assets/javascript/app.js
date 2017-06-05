@@ -17,7 +17,8 @@ var someSounds = {
 	randomTimeOutAudio: new Audio('assets/audio/stanley.mp3'),
 	basicEnder: new Audio('assets/audio/basic-ender.mp3'),
 	amEnder: new Audio('assets/audio/am-ender.mp3'),
-	expertEnder: new Audio('assets/audio/expert-ender2.mp3')
+	expertEnder: new Audio('assets/audio/expert-ender2.mp3'),
+	startUp: new Audio('assets/audio/startupoffice.mp3')
 }
 
 var qOne = {
@@ -286,13 +287,13 @@ function areWeDoneYet () {
 // What happens when game is over
 function allDone () {
 	displayConvertedTime = timeConverter(totalTime);
-	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
+	someSounds.startUp.play();
 	$("#imageRow").empty();
 	$("#questionRow").html('<p class="enderText">Wrong ' + wrongAnswers + '</p><p class="enderText">Correct ' + correctAnswers + '</p><p class="enderText">Unanswered ' + unansweredAnswers + '</p>' + '<p>You spent ' +  displayConvertedTime + ' total on this quiz answering the questions</p>');
 	whatIsYourGrade();
 	var resetButton = $("#choicesRow").append("<div class='button'><button class='btn-danger btn-xxl'>RESTART GAME</button></div>");
 	$(resetButton).one("click", function () {
-		$(".startUpAudio").attr("src", "");
+		someSounds.startUp.pause();
 		$("#choicesRow").empty();
 		correctAnswers = 0;
 		wrongAnswers = 0;
@@ -339,12 +340,12 @@ $(document).ready(function(){
 	var topTitle = $("<h1 class='introTitle'>the Office Trivia Game</h1>");
 	$("#firstRow").prepend(topTitle);
 	//This will control autoplay of Theme once you get to site.
-	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
+	someSounds.startUp.play();
 	$("#questionRow").append("<p>Press the start game button to begin.  Trivia questions will be displayed.  Click the answer you believe to be correct.  You will be alerted if your answer was correct or incorrect and then the game will move you on to the next question. At the end the game will let you know how many questions you got right and wrong and how much time you spent overall answering questions on the quiz.  Based on a combination of accuracy and time you will be awarded an Office Trivia Skill Level.  Enjoy!</p>");
 	var starterButton = $("#firstRow").append("<div class='button'><button class='btn-warning btn-lg'>START GAME</button></div>");
 	$("#firstRow").append("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
 	$(starterButton).one("click", function () {
-		$(".startUpAudio").attr("src", "");
+		someSounds.startUp.pause();
 		$("button").remove();
 		$(".introTitle").empty();
 		showQuestion(listOfQuestions[currentQuestionIndex]);
