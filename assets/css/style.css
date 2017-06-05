@@ -1,7 +1,6 @@
-#backG {
+.container-fluid {
 	background-image: url("../images/office-background.jpg");
 	background-size: cover;
-	height: 700px;
 }
 #firstRow {
 	background-color: white;
@@ -44,8 +43,7 @@ h1 {
 	margin-top: 50px;
 }
 #imageRow img {
-height:auto;
-width:350px;
+	max-width: 415px;
 }
 button {
 	margin-top: 10px;
@@ -81,4 +79,10 @@ button {
 .introTitle {
 	font-family: "Courier New";
 	font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+	#imageRow img {
+	max-width: 100px;
+}
 }

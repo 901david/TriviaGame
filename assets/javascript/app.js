@@ -28,8 +28,8 @@ var qOne = {
 	choice4: 'Oprah Winfrey',
 	answer: 'Steve Carell',
 	sound: new Audio('assets/audio/best-boss.mp3'),
-	starterImage: '<img src="assets/images/crazymichael.gif">',
-	image: '<img src="assets/images/best-boss.jpg">', 
+	starterImage: '<img class="img-responsive center-block" src="assets/images/crazymichael.gif">',
+	image: '<img class="img-responsive center-block" src="assets/images/best-boss.jpg">', 
 };
 var qTwo = {
 	question: '2.  The Office is filled with romances.  Which female in the office does Dwight have an ongoing relationship with thoughout the seasons?',
@@ -39,8 +39,8 @@ var qTwo = {
 	choice4: 'Angela',
 	answer: 'Angela',
 	sound: new Audio('assets/audio/mose.mp3'),
-	starterImage: '<img style="width:250px" src="assets/images/holly.jpg">',
-	image: '<img src="assets/images/dwight-ang.gif">'
+	starterImage: '<img class="img-responsive center-block" style="width:300px;" src="assets/images/holly.jpg">',
+	image: '<img class="img-responsive center-block" src="assets/images/dwight-ang.gif">'
 }
 var qThree = {
 	question: '3. How many seasons did the office air?',
@@ -50,8 +50,8 @@ var qThree = {
 	choice4: '6',
 	answer: '9',
 	sound: new Audio('assets/audio/toby2.mp3'),
-	starterImage: '<img  style="width:400px" src="assets/images/office-banner.jpeg">',
-	image: '<img  style="width:400px" src="assets/images/full-crew.jpg">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/office-banner.jpeg">',
+	image: '<img class="img-responsive center-block" src="assets/images/full-crew.jpg">'
 }
 var qFour = {
 	question: '4.  Which employee had a great rise to success very quickly in the company, only to be jailed for fraud?',
@@ -61,8 +61,8 @@ var qFour = {
 	choice4: 'Packer',
 	answer: 'Ryan',
 	sound: new Audio('assets/audio/ryan.mp3'),
-	starterImage: '<img style="width:250px" src= "assets/images/wiseworms.jpg">',
-	image: '<img src="assets/images/ryan.gif">'
+	starterImage: '<img class="img-responsive center-block" style="width:250px;" src= "assets/images/wiseworms.jpg">',
+	image: '<img class="img-responsive center-block" src="assets/images/ryan.gif">'
 }
 var qFive = {
 	question: '5.  When Andy lets Dwight install a doomsday device measuring the amount of mistakes everyone makes, how many mistakes does he allow before sending out damning emails to the CEO and everyone losing their job?',
@@ -72,8 +72,8 @@ var qFive = {
 	choice4: '10',
 	answer: '5',
 	sound: new Audio('assets/audio/weapons2.mp3'),
-	starterImage: '<img style="width:200px" src="assets/images/dwight.png">',
-	image: '<img src="assets/images/killer-dwight.gif">'
+	starterImage: '<img class="img-responsive center-block" style="width:250px;" src="assets/images/dwight.png">',
+	image: '<img class="img-responsive center-block" src="assets/images/killer-dwight.gif">'
 }
 var qSix = {
 	question: '6.  The entire warehouse crew quits, sending Darryl into a spiral of despair after this happens:',
@@ -83,8 +83,8 @@ var qSix = {
 	choice4: 'All of the above.',
 	answer: 'They win the lottery.',
 	sound: new Audio('assets/audio/going.mp3'),
-	starterImage: '<img src="assets/images/dance.gif">',
-	image: '<img src="assets/images/lotto.gif">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/dance.gif">',
+	image: '<img class="img-responsive center-block" src="assets/images/lotto.gif">'
 }
 var qSeven = {
 	question: '7.  Michael makes the mistake of beginning a sexual relationship with his immediate superior in what destination vacation location?',
@@ -94,8 +94,8 @@ var qSeven = {
 	choice4: 'Jamaica',
 	answer: 'Jamaica',
 	sound: new Audio('assets/audio/punish.mp3'),
-	starterImage: '<img style="width:200px" src="assets/images/jamaica.gif">',
-	image: '<img src="assets/images/jamaica-jan.jpg">'
+	starterImage: '<img class="img-responsive center-block" style="width:250px;" src="assets/images/jamaica.gif">',
+	image: '<img class="img-responsive center-block" src="assets/images/jamaica-jan.jpg">'
 }
 var qEight = {
 	question: '8.  Michael gets fed up with being treated poorly by Dunder Mifflin and decides to break off and start his own paper company. What did he name his company?',
@@ -105,8 +105,8 @@ var qEight = {
 	choice4: 'Collective Vision Exclusive Paper',
 	answer: 'Michael Scott Paper Company',
 	sound: new Audio('assets/audio/merhit.mp3'),
-	starterImage: '<img  style="width:250px" src="assets/images/car-hit.jpg">',
-	image: '<img  style="width:450px" src="assets/images/merhit.jpg">'
+	starterImage: '<img class="img-responsive center-block" style="width:275px;" src="assets/images/car-hit.jpg">',
+	image: '<img class="img-responsive center-block" src="assets/images/merhit.jpg">'
 }
 var qNine = {
 	question: "9.  What is the famed Michael Scott's most well-known catchphrase?",
@@ -116,8 +116,8 @@ var qNine = {
 	choice4: "Can't we all get along?",
 	answer: "That's what she said!",
 	sound: new Audio('assets/audio/she-said.mp3'),
-	starterImage: '<img  style="width:200px" src="assets/images/swag.jpg">',
-	image: '<img src="assets/images/she-said.jpg">'
+	starterImage: '<img class="img-responsive center-block" style="width:250px;" src="assets/images/swag.jpg">',
+	image: '<img class="img-responsive center-block" style="width:250px;" src="assets/images/she-said.jpg">'
 }
 var qTen = {
 	question: '10.  Michael Scott wrote a film that was eventually put together and shown on the show. It starred everyone from the office.  What was this film called?',
@@ -127,8 +127,8 @@ var qTen = {
 	choice4: 'Threat Level Midnight',
 	answer: 'Threat Level Midnight',
 	sound: new Audio('assets/audio/scarn.mp3'),
-	starterImage: '<img  style="width:200px" src="assets/images/estimate-me.jpg">',
-	image: '<img style="width:450px" src="assets/images/midnight.png">'
+	starterImage: '<img class="img-responsive center-block" style="width:250px;" src="assets/images/estimate-me.jpg">',
+	image: '<img class="img-responsive center-block"  src="assets/images/midnight.png">'
 }
 var qEleven = {
 	question: '11.  Fill in the blank:  To raise spirits amongst the employees Michael arranges for everyone to go on a ________ cruise.',
@@ -138,8 +138,8 @@ var qEleven = {
 	choice4: 'cheap',
 	answer: 'booze',
 	sound: new Audio('assets/audio/boss.mp3'),
-	starterImage: '<img src="assets/images/michael-dance.gif">',
-	image: '<img src="assets/images/booze-cruise.jpg">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/michael-dance.gif">',
+	image: '<img class="img-responsive center-block" src="assets/images/booze-cruise.jpg">'
 }
 var qTwelve = {
 	question: '12.  While attending the annual "Paper Convention" Michael and Dwight trying to impress Jim do what in their hotel room?',
@@ -149,8 +149,8 @@ var qTwelve = {
 	choice4: 'All of the above',
 	answer: 'All of the above',
 	sound: new Audio('assets/audio/urine.mp3'),
-	starterImage: '<img style="width:175px" src="assets/images/date-mike.jpg">',
-	image: '<img src="assets/images/urine.jpg">'
+	starterImage: '<img class="img-responsive center-block" style="width:150px;" src="assets/images/date-mike.jpg">',
+	image: '<img class="img-responsive center-block" style="width:350px;" src="assets/images/urine.jpg">'
 }
 var qThirteen = {
 	question: '13.  Once Michael leaves the show there are several bosses that replace him.  What famous film star replaced him first?',
@@ -160,8 +160,8 @@ var qThirteen = {
 	choice4: 'Machete',
 	answer: 'Will Ferrell',
 	sound: new Audio('assets/audio/hoe2.mp3'),
-	starterImage: '<img src="assets/images/you-didnt-answer.gif">',
-	image: '<img  style="width:450px" src="assets/images/will.jpg">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/you-didnt-answer.gif">',
+	image: '<img class="img-responsive center-block" src="assets/images/will.jpg">'
 }
 var qFourteen = {
 	question: '14.  Which character cannot stop obsessing over his Ivy League college singing group at Cornell?',
@@ -171,8 +171,8 @@ var qFourteen = {
 	choice4: 'Pete',
 	answer: 'Andy',
 	sound: new Audio('assets/audio/cornell.mp3'),
-	starterImage: '<img  style="width:450px" src="assets/images/cornelld.gif">',
-	image: '<img  style="width:450px" src="assets/images/cornell.jpg">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/cornelld.gif">',
+	image: '<img class="img-responsive center-block" style="width:750px;" src="assets/images/cornell.jpg">'
 }
 var qFifteen = {
 	question: '15.  After making the mistake of signing a contract with Angela to have a child, Dwight realizes he could owe Angela $30,000 plus he comes up with what idea to settle?',
@@ -182,8 +182,8 @@ var qFifteen = {
 	choice4: "Gives land on his farm",
 	answer: 'Sexual Punch Card',
 	sound: new Audio('assets/audio/specimen.mp3'),
-	starterImage: '<img  style="width:200px" src="assets/images/dwight-imitator.jpg">',
-	image: '<img src="assets/images/that-face.jpg">'
+	starterImage: '<img class="img-responsive center-block" src="assets/images/dwight-imitator.jpg">',
+	image: '<img class="img-responsive center-block" style="width: 400px;" src="assets/images/that-face.jpg">'
 }
 // Question array to iterate over
 var listOfQuestions = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen, qEleven, qTwelve, qThirteen, qFourteen, qFifteen];
@@ -342,6 +342,7 @@ $(document).ready(function(){
 	$("#backG").append("<audio class='startUpAudio' src='assets/audio/startupoffice.mp3' autoplay></audio>");
 	$("#questionRow").append("<p>Press the start game button to begin.  Trivia questions will be displayed.  Click the answer you believe to be correct.  You will be alerted if your answer was correct or incorrect and then the game will move you on to the next question. At the end the game will let you know how many questions you got right and wrong and how much time you spent overall answering questions on the quiz.  Based on a combination of accuracy and time you will be awarded an Office Trivia Skill Level.  Enjoy!</p>");
 	var starterButton = $("#firstRow").append("<div class='button'><button class='btn-warning btn-lg'>START GAME</button></div>");
+	$("#firstRow").append("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
 	$(starterButton).one("click", function () {
 		$(".startUpAudio").attr("src", "");
 		$("button").remove();
